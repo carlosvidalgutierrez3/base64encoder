@@ -14,12 +14,12 @@ void setup() {
   
   uint16_t data_value1 = 1932;  // value between 0 and 65535 (2^16 - 1) <----- INPUT sensor id    (2-byte)          
   uint16_t data_value2 = 65;  // <-------------------------------------------- INPUT sensor data  (2-byte)
-  uint8_t bytes[4];
+  uint8_t bytes[4]; // <------------------------------------------------------ EDIT here ...
   
   bytes[0] = data_value1%256;
   bytes[1] = data_value1/256;
   bytes[2] = data_value2%256;
-  bytes[3] = data_value2/256;
+  bytes[3] = data_value2/256; // <-------------------------------------------- ... and here to add bytes
 
   Serial.println("Input data:");
   Serial.print("Value 1: ");
